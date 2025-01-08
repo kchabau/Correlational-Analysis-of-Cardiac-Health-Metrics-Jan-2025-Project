@@ -14,7 +14,7 @@ Please refer to the Methods folder for [Results](/Method/README.md)
 
 The [Analysis](/Analysis) contains `.csv` files of query results of our overall data set.
 
-**Please refer** to the [Tableau Dashboard]() created in conjunction with this project for a better visual understanding of the findings.
+**Please refer** to the [Tableau Dashboard](https://public.tableau.com/app/profile/kevin.chabau/viz/Correlation-Heart-Attack-Project-Jan-2025/Dashboard1?publish=yes) created in conjunction with this project for a better visual understanding of the findings.
 
 ## Tools I Use:
 - **MySQL**: For database creation, management, and query processing.
