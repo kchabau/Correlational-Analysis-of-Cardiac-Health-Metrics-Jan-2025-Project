@@ -10,7 +10,7 @@ This dataset contains data representing the risk factors, demographics, and heal
 
 The goal is to investigate demographic patterns, key metrics, and underlying factors influencing cardiovascular risk. 
 
-Please refer to the Methods folder for [Results](/Methods/README.md)
+Please refer to the Methods folder for [Results](/Method/README.md)
 
 The [Analysis](/Analysis) contains `.csv` files of query results of our overall data set.
 
