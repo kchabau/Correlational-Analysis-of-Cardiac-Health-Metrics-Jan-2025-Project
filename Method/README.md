@@ -64,11 +64,11 @@ SELECT
     ROUND((unconfirmed.`Total Patients` / (confirmed.`Total Patients` + unconfirmed.`Total Patients`)) * 100, 2) AS `% of Unconfirmed Heart Attack`
 FROM confirmed, unconfirmed;
 ```
-$ \text{Percentage of Confirmed Heart Attack} = \left( \frac{\text{Confirmed Total Patients}}{\text{Total Patients}} \right) \times 100 $
+$\text{Percentage of Confirmed Heart Attack} = \left( \frac{\text{Confirmed Total Patients}}{\text{Total Patients}} \right) \times 100$
 
 
 
-$ \text{Percentage of Unconfirmed Heart Attack} = \left( \frac{\text{Unconfirmed Total Patients}}{\text{Total Patients}} \right) \times 100 $
+$\text{Percentage of Unconfirmed Heart Attack} = \left( \frac{\text{Unconfirmed Total Patients}}{\text{Total Patients}} \right) \times 100$
 
 Utilizing a mathematical formula we can first determine the percentage of individuals with confirmed and unconfirmed heart attacks within our data set. The query provides a quick overview of the distribution of heart attack cases (confirmed vs. unconfirmed) in the dataset. This is useful for summarizing the data without inspecting individual records.
 
