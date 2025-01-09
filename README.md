@@ -26,4 +26,12 @@ The [Analysis](/Analysis) contains `.csv` files of query results of our overall 
 
 ## What I Learned:
 
+While analyzing the dataset, I came across multiple challenges including, but not limited to, query performance quality and aggregate data computation.
+
+Query performance is defined as a measure of how quickly and efficiently a database system retrieves data. In other words, our query structure has to be written in a manner that efficiently communicates between nodes, computes, and outputs information. In the particular case of creating a `CASE` statement for categorizing all of the different metric value sets, I attempted to write the query using Common Table Expression (CTE) for each individual category. This caused the performance of the query to take over 30 sec do compute. Actually, the data never rendered. **For laughs**, the query overheated my Laptop, which in turn, ramped up the speed of my fans just to cool it down (*man I need a PC*). When attempting to run the query directly on the database server instead of VS Code, as an IDE, it would disconnect from the local server. This was due to the CTE, processing the information of the data set. At the time of writing the query, each individual row had to be analyzed, for each case group, on the data set of 270,000.
+
+The workaround this, was to create *subquery* for computational efficiency. This allowed the database engine to optimize the execution plan more efficiently. Merging the subquery into the main query, instead of maintaining categorizations within Common Table Expressions, creating a more efficient execution plan. (*Although this is not always the case.*) No pun intended.
+
 ## Things I Would Add:
+
+Further scientific statistical analysis, such as, chi-square tests to evaluate relationships between categorical values (ie. gender,cholesterol) and heart attack likelihood.

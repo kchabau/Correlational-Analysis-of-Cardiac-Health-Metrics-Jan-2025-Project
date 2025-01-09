@@ -2,15 +2,15 @@
 
 SQL was used to query and preprocess the dataset. Basic demographic queries included the calculation of average age by gender, identification of age ranges, and categorization of data using CASE statements.
 
-    ```
-    SELECT ROUND(AVG(age),2) AS `Average Female Age`
-    FROM heart_attack_china_youth_vs_adult
-    WHERE Gender = 'Female';
+```
+SELECT ROUND(AVG(age),2) AS `Average Female Age`
+FROM heart_attack_china_youth_vs_adult
+WHERE Gender = 'Female';
 
-    SELECT ROUND(AVG(age),2) AS `Average Male Age`
-    FROM heart_attack_china_youth_vs_adult
-    WHERE Gender = 'Male';
-    ```
+SELECT ROUND(AVG(age),2) AS `Average Male Age`
+FROM heart_attack_china_youth_vs_adult
+WHERE Gender = 'Male';
+```
 
 **Average Female Age:** 35.54 yoa
 
