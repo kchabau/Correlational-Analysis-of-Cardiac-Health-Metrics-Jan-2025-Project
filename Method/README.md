@@ -2,7 +2,7 @@
 
 SQL was used to query and preprocess the dataset. Basic demographic queries included the calculation of average age by gender, identification of age ranges, and categorization of data using CASE statements.
 
-```
+```sql
 SELECT ROUND(AVG(age),2) AS `Average Female Age`
 FROM heart_attack_china_youth_vs_adult
 WHERE Gender = 'Female';
@@ -16,9 +16,9 @@ WHERE Gender = 'Male';
 
 **Average Male Age:** 35.52 yoa
 
-
 **Age of Participant Range:** 12 - 59 yoa
-```
+
+```sql
 SELECT MIN(age)
 FROM heart_attack_china_youth_vs_adult;
 
@@ -43,7 +43,8 @@ Key factors affecting cardiovascular health are (but not limited to):
 For this section, we will be analyzing individuals who have experienced heart attacks and measuring the average across key metrics, to isolate the suspecting factors heart attacks. Our data set also includes other factors such as sleeping hours, employment status, income level, education level, alcohol consumption, and more. We will be measuring this data to see if we can retrieve insights from it. One of my hypothesis is, that there is a correlation with income level and stress level, which play key roles in affecting individual health.
 
 But first, let's measure our patient data set. 
-```
+
+```sql
 WITH confirmed AS (
     SELECT 
         COUNT(*) AS `Total Patients`
@@ -88,7 +89,8 @@ We will begin by analyzing groups and define our metrics.
     - Middle Age Adult: Ages 25 to 39
     - Adult: Ages 40 to 59
     - Senior: Age 60 and above 
-```
+
+```sql
 WITH age_cat AS (
     SELECT 
         gender,
@@ -116,8 +118,8 @@ SELECT
 FROM age_cat
 GROUP BY age_group, gender, heart_attack
 ORDER BY age_group, gender, heart_attack;
-
 ```
+
 This query provides a clear breakdown of heart attack prevalence across different age groups. The **Percentage** help identify the relative distribution of individuals within each age group (across all genders) who have or haven't had a heart attack. This can be useful for public health analysis or identifying which age groups are most affected by heart attacks, and for targeting health interventions or further studies on heart attack causes in specific age groups.
 
 **% of Heart Attack by Gender**: The percentage of individuals with a heart attack for each age group and gender.
@@ -174,7 +176,7 @@ According to the [CDC](https://www.cdc.gov/cholesterol/about/index.html#:~:text=
 
 ![Cleveland Clinic Organization](/Assets/cleveland-clinic-org-cholesterol-level.jpg)
 
-```
+```sql
 SELECT 
     Gender,
     Heart_Attack,
@@ -295,7 +297,7 @@ This query resulted in over **2,245 records**. Below is an illustration of some 
 
 We can utilize Python to `Describe` the data in the csv file and provide summary statistics for all columns, including counts, unique values, means, and standard deviations, depending on the data type of each column.
 
-```
+```py
 # Python Code
 import pandas as pd
 
@@ -372,7 +374,7 @@ In terms of population representation, no single group dominates the dataset, as
 
 We can also look into the occurrence of heart attacks, across different age groups to identify correlations, if any, there are with smoking and heart attacks.
 
-```
+```sql
 SELECT 
     age_group,
     Heart_Attack AS 'Heart Attack',
