@@ -46,16 +46,16 @@ But first, let's measure our patient data set.
 
 ```sql
 WITH confirmed AS (
-    SELECT 
-        COUNT(*) AS `Total Patients`
+SELECT 
+    COUNT(*) AS `Total Patients`
 FROM heart_attack_china_youth_vs_adult
 WHERE Heart_Attack = 'Yes' 
 ),
 unconfirmed AS (
-    SELECT 
-        COUNT(*) AS `Total Patients`
-    FROM heart_attack_china_youth_vs_adult
-    WHERE Heart_Attack = 'No'
+SELECT 
+    COUNT(*) AS `Total Patients`
+FROM heart_attack_china_youth_vs_adult
+WHERE Heart_Attack = 'No'
 )
 SELECT
     confirmed.`Total Patients` + unconfirmed.`Total Patients` AS `Total Patients`,
