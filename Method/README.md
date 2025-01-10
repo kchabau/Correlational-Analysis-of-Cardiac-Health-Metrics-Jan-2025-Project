@@ -381,8 +381,8 @@ SELECT
     Gender,
     Smoking,
     COUNT(*) AS 'Number of Patients',
-    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS 'Percentage of Total Patients',
-        ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM heart_attack_china_youth_vs_adult), 2) AS '% of Total Population'
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS '% of Total Population',
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM heart_attack_china_youth_vs_adult), 2) AS '% of Total Population'
 FROM (
     SELECT 
         Gender,
@@ -403,7 +403,7 @@ ORDER BY age_group, Heart_Attack, Gender, Smoking;
 
 Below is the distribution of patients who have had heart attacks based on their smoking status, age group, and gender, and calculates the percentage of these individuals compared to the overall dataset.
 
-| Age Group        | Heart Attack | Gender | Smoking | Number of Patients | Percentage of Total Patients | % of Total Population |
+| Age Group        | Heart Attack | Gender | Smoking | Number of Patients | % of Total Patients | % of Total Population |
 |------------------|--------------|--------|---------|---------------------|------------------------------|-----------------------|
 | Adolescent       | No           | Female | No      | 6464                | 2.39                         | 2.39                  |
 | Adolescent       | No           | Female | Yes     | 2808                | 1.04                         | 1.04                  |
