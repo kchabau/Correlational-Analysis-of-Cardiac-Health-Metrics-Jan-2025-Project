@@ -238,7 +238,7 @@ If you're looking for deeper insights, consider running statistical tests (e.g.,
 
 At a later time, we will use **Visualization Tools** to better understand impact of each risk factor.
 
-This query resulted in over **2,245 records**. Below is an illustration of some of the data queried.
+This query resulted in **2,245 records**. Below is an illustration of some of the data queried.
 
 | Gender | Heart_Attack | age_group | bp_group | bmi_group | cholesterol_group | Confirmed Heart Attack Count | % of Heart Attack in Group | % of Total Population |
 | ------ | ------------ | --------- | -------- | --------- | ----------------- | ---------------------------- | -------------------------- | --------------------- |
